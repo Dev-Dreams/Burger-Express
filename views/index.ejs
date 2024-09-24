@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- sets the character encoding -->
+    <meta charset="UTF-8" />
+    <!-- sets the viewport for correct display on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- page title -->
+    <title>Burger Express. Order confirmation</title>
+    <!-- connects Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- connects to Google Fonts to include the Roboto font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- connects icons Material Icons to display icon-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- connects the main CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- inserts a page header (EJS template) -->
+    <header><%- include('header') %></header>
+    <!-- main content area starts here -->
+    <main>
+      <!--  https://getbootstrap.com/docs/5.3/components/carousel/ -->
+      <!-- full-width container for the carousel -->
+      <div class="container-fluid my-carousel">
+        <!-- bootstrap carousel -->
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <!--carousel indicators, allowing user navigation between slides-->
+          <div class="carousel-indicators">
+            <!-- Carousel toggle buttons -->
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <!-- carousel content -->
+          <div class="carousel-inner">
+            <!-- photos of the carousel -->
+            <div class="carousel-item active">
+              <img
+                src="/images/carousel1.jpg"
+                class="d-block w-100"
+                alt="Delicious Burger"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/images/carousel2.jpg"
+                class="d-block w-100"
+                alt="Tasty Burger"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/images/carousel3.jpg"
+                class="d-block w-100"
+                alt="Yummy Burger"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/images/carousel4.jpg"
+                class="d-block w-100"
+                alt="Yummy Burger"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/images/carousel5.jpg"
+                class="d-block w-100"
+                alt="Yummy Burger"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/images/carousel6.jpg"
+                class="d-block w-100"
+                alt="Yummy Burger"
+              />
+            </div>
+          </div>
+          <!-- carousel navigation buttons -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- button "View Menu" -->
+        <div class="carousel-menu-button">
+          <a href="/menu" class="btn btn-outline-light">View Menu</a>
+        </div>
+        <!-- text below the carousel -->
+        <div class="text-center mt-5 px-3">
+          <h1 class="display-3 fw-bold my-index-text">
+            Welcome to Burger Express!
+          </h1>
+          <p class="lead my-4 my-index-text">
+            We are proud that our hamburgers are a work of art in the fast food
+            world
+          </p>
+        </div>
+      </div>
+      <!-- end of bootstrap "Card" component -->
+    </main>
+    <!-- footer starts here -->
+    <footer class="bg-dark text-light py-3 mt-4">
+      <!-- inserts a page footer (EJS template) -->
+      <%- include('footer') %>
+    </footer>
+    <!-- script for starting the carousel -->
+    <script src="/js/index.js"></script>
+    <!-- connects the Bootstrap JavaScript library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

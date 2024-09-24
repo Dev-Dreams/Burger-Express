@@ -1,0 +1,74 @@
+<!-- define a Bootstrap navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- container for navbar content -->
+  <div class="container">
+    <!-- display an icon and a link to the homepage -->
+    <span class="material-symbols-outlined">fastfood</span>
+    <a class="navbar-brand" href="/">Burger Express</a>
+    <!-- mobile responsive toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- collapsible section for navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- link to the homepage -->
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <!-- link to the menu page -->
+        <li class="nav-item">
+          <a class="nav-link" href="/menu">Menu</a>
+        </li>
+        <!-- link to the About Us page -->
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <!-- link to the Contact page -->
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+      <!-- right side of the navbar for user login and cart -->
+      <div class="d-flex">
+        <ul class="navbar-nav">
+          <!-- link to the cart with a dynamic item count -->
+          <li class="nav-item me-2">
+            <a class="nav-link" href="/cart">
+              Cart
+              <span class="badge bg-secondary align-text-top" id="cartCount">0</span>
+            </a>
+          </li>
+          <% if (!user) { %> <!-- if the user is not logged in, show login and register links -->
+            <li class="nav-item" id="loginItem">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item" id="registerItem">
+              <a class="nav-link" href="/register">Register</a>
+            </li>
+          <% } else { %>
+            <!-- show Profile and Logout if logged in -->
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">
+                <span class="material-symbols-outlined">account_circle</span> Profile
+              </a>
+            </li>
+            <li class="nav-item" id="logoutItem">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- include the script that updates cart and login status -->
+<script src="/js/header.js"></script>

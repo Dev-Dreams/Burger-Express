@@ -1,0 +1,94 @@
+body {
+  font-family: 'Roboto', sans-serif;                /* sets the Roboto font from Google Fonts as the default font for all text in the body */
+  background-color: #dedfe4;                      /* background color for the body, providing a light gray shade */
+}
+/* defines the color and margin for icons in the header */
+.material-symbols-outlined {
+  color: lavender;                                /* sets icon color to lavender */
+  margin: 0 10px 0 0;                               /* right margin of 10px to separate icons from adjacent text */
+}
+/* style for card components in the menu */
+.my-card {
+  background-color: #f6f2f6;
+}
+/* style for primary buttons in menu cards*/
+.btn-outline-primary {
+  color: #d2374a;                                 /* red text color */
+  border-color: #d2374a;                          /* red border color */
+}
+/* hover effects for primary buttons in menu cards*/
+.btn-outline-primary:hover {
+  color: #fff;                                    /* white text on hover */
+  background-color: #d2374a;                      /* red background on hover */
+  border-color: #d2374a;                          /* red border color even on hover */
+}
+/* focus and active states for primary buttons in menu cards*/
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(164, 54, 4, 0.5); /* shadow for a 3D effect */
+}
+/* active state styling to show the button in menu cards is currently selected or clicked */
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;                                    /* white text */
+  background-color: #d2374a;                      /* background stays reddish */
+  border-color: #d2374a;                          /* keeps border color consistent */
+}
+
+/* carousel customization */
+.my-carousel {
+  padding: 0;                                       /* removing padding */
+}
+.my-carousel .carousel-item {
+  display: flex;
+  max-height: 800px;                                /* limit height */
+}
+/* carousel images cover the available area without distorting their aspect ratio */
+.my-carousel .carousel-item img {
+  object-fit: cover;                                /* images cover the available space without being stretched */
+}
+
+.container-fluid.my-carousel {
+  position: relative;
+}
+/* positioning and styling for the carousel's menu button */
+.carousel-menu-button {
+  position: absolute;                               /* absolute position */
+  top: 50%;                                         /* centers vertically */
+  left: 50%;                                        /* centers horizontally */
+  transform: translate(-50%, -50%);                 /* center the element */
+  z-index: 15;                                      /* button is above all other elements */
+  text-align: center;                               /* center the text within the button */
+  width: auto;                                      /* automatic width */
+}
+/* styling for the 'View Menu' button within the carousel */
+.carousel-menu-button a.btn {
+  font-size: 2vw;                                   /* responsive font size based on viewport width */
+  padding: 0.75vw 1.5vw;                            /* responsive padding */
+  border: 0.2vw solid #fff;                       /* white border */
+  background-color: transparent;                    /* Transparent background */
+  color: #fff;                                    /* white text */
+  transition: all 0.5s ease;                        /* smooth transition for hover effects */
+}
+/* hover effect for 'View Menu' button */
+.carousel-menu-button a.btn:hover {
+  background-color: #fff;                         /* white background on hover */
+  color: #333;                                    /* dark grey text on hover */
+}
+/* color of the invitation message on the main page */
+.my-index-text {
+  color: #61000d;                                 /* deep red */
+}
+
+/* the color of the form fields in case of incorrect filling of the form on the "Complete Your Order" page */
+.is-invalid {
+  border-color: #dc3545;                          /* bright red border */
+  background-color: #fff5f5;                      /* light red background */
+}
+
+/* profile icon */
+.nav-link .material-symbols-outlined {
+  vertical-align: middle;                           /* Align icon to middle of text */
+  font-size: 1.5em;                                 /* Set icon size to 1.5 times the current font size */
+}
